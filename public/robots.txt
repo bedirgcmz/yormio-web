@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: __SITE_ORIGIN__/sitemap.xml
+Sitemap: https://yormio-privacy-terms-page.netlify.app/sitemap.xml
