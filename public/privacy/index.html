@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0a2f2b">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Privacy Policy — Yormio</title>
+  <meta name="description" content="Yormio Privacy Policy describing data processing, AI, account, cloud sync, subscriptions, sharing, retention and user rights.">
+  <link rel="canonical" href="__SITE_ORIGIN__/privacy/">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="Yormio home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Yormio</span>
+      </a>
+      <nav class="nav" aria-label="Legal and support navigation">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+        <a href="/account-deletion/">Delete account</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="legal shell">
+    <header class="legal-header">
+      <div class="eyebrow">Privacy</div>
+      <h1>Privacy Policy</h1>
+      <p class="legal-lead">This policy explains how Yormio handles information when you use the mobile app, its AI features, cloud services, subscriptions, checklist sharing, support forms and this website.</p>
+      <p class="meta">Effective and last updated: 25 September 2026</p>
+    </header>
+
+    <aside class="notice"><strong>Operator:</strong> Bedir Gocmez · <strong>Privacy contact:</strong> <a href="mailto:bgswedenappdev@gmail.com">bgswedenappdev@gmail.com</a></aside>
+
+    <section>
+      <h2>1. Who is responsible for your data</h2>
+      <p>For Yormio-controlled processing, the data controller is <strong>Bedir Gocmez</strong> (referred to as “Yormio”, “we”, “us” or “our” in this policy). You can contact us at <a href="mailto:bgswedenappdev@gmail.com">bgswedenappdev@gmail.com</a>.</p>
+    </section>
+
+    <section>
+      <h2>2. Yormio is local-first</h2>
+      <p>Manual reminders and checklists are designed to work locally. Before cloud/account features are used, product content is stored in the app’s local database on your device. Local data can include reminder and checklist titles, descriptions, checklist items, dates and times, time zones, recurrence information for reminders, completion status, notification preferences and related technical identifiers.</p>
+      <p>If you link or create an account and cloud sync is active, confirmed Yormio content may also be synchronized to Yormio’s Supabase backend so it can be recovered or synchronized across supported devices.</p>
+    </section>
+
+    <section>
+      <h2>3. Information we process</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Category</th><th>Examples</th><th>Why it is used</th></tr></thead>
+        <tbody>
+          <tr><td>Account information</td><td>Yormio user ID, email where provided by the sign-in method, display name, linked sign-in provider, profile preferences and time zone.</td><td>Authentication, account linking, recovery, cloud sync, entitlement identity and support.</td></tr>
+          <tr><td>Reminder and checklist content</td><td>Titles, descriptions, checklist labels, quantities/units, schedules, time zones, reminder recurrence, status and one-off checklist alert metadata.</td><td>Provide the core reminder/list service and, for linked accounts, synchronize confirmed content.</td></tr>
+          <tr><td>AI capture input</td><td>Short microphone recordings, pasted text, device time zone, locale and current time context.</td><td>Transcribe and structure your input into reviewable reminder/list candidates.</td></tr>
+          <tr><td>AI usage and service metadata</td><td>Pseudonymous user ID, request ID, allowance class, usage count, model ID, prompt/schema version, request outcome and limited non-content diagnostics.</td><td>Quota enforcement, idempotency, reliability, abuse prevention and debugging.</td></tr>
+          <tr><td>Subscription information</td><td>Yormio user ID used as the RevenueCat App User ID, entitlement status, product ID, store, expiration state and related subscription event metadata.</td><td>Purchase, restore, entitlement verification, refunds/grace-state handling and subscription support.</td></tr>
+          <tr><td>Checklist sharing</td><td>An immutable snapshot of the shared checklist, optional one-off schedule metadata, sender display name, token hash and expiry.</td><td>Create a secure share link and let a recipient preview/import an independent copy.</td></tr>
+          <tr><td>Device/technical data</td><td>Local sync device identifier, mutation/revision IDs, notification planning state, app/platform information and security/rate-limit signals.</td><td>Offline synchronization, conflict handling, notification reliability, security and abuse prevention.</td></tr>
+          <tr><td>Support and deletion requests</td><td>Email address, optional account/user ID, platform, message and request details you submit on this site.</td><td>Respond to support requests and verify/process privacy or deletion requests.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <h2>4. Voice, pasted text and AI processing</h2>
+      <p>When you choose an AI feature, Yormio sends the necessary input to Yormio’s Supabase Edge Function and then to Google’s Gemini service for AI processing. For voice capture, the audio is sent as request-scoped data for processing. For “Paste text with AI”, the text you submit is sent for the same purpose.</p>
+      <p>Yormio does <strong>not</strong> intentionally persist raw audio in Supabase Storage or application logs. The app removes the temporary local recording after processing, cancellation or discard. Yormio’s current application design does not save a raw transcript by default. The structured result you confirm, such as a reminder or checklist, is stored as product data.</p>
+      <p>Google processes the content sent to Gemini as a service provider under the applicable service terms and privacy/data-processing arrangements. Provider-side handling is also subject to those arrangements and may differ from Yormio’s own application-level retention.</p>
+    </section>
+
+    <section>
+      <h2>5. Accounts and sign-in providers</h2>
+      <p>Yormio can create a Supabase anonymous identity when a guest first uses AI. You may later link or create a permanent account using supported authentication methods such as Apple, Google or email, where available. Apple or Google may provide Yormio with account identifiers and profile information permitted by your authorization, such as an email address, name or profile image.</p>
+      <p>Authentication session credentials are stored using secure device storage where supported. Yormio does not ask you to send account passwords through support or deletion forms.</p>
+    </section>
+
+    <section>
+      <h2>6. Cloud sync and notifications</h2>
+      <p>For linked accounts, Supabase can store synchronized reminder/checklist records, checklist items, recurrence data for reminders, one-off checklist alert metadata, revisions, tombstones and synchronization identifiers. Notifications are scheduled locally on your device. Yormio does not promise that an operating system will deliver every notification at an exact time.</p>
+      <p>Home-screen widget snapshots are stored on-device for rendering supported widgets. They are not a separate cloud analytics feed.</p>
+    </section>
+
+    <section>
+      <h2>7. Checklist sharing</h2>
+      <p>If you choose to share a checklist, Yormio stores an immutable snapshot in Supabase. The stored snapshot can contain the checklist title, item labels, quantities/units, optional one-off schedule/time-zone/notification metadata, and a sender display name when available. The raw share token is not stored by Yormio’s database; a cryptographic hash is stored for lookup. Current share links expire after <strong>7 days</strong>. Expired shares are removed as part of the share lifecycle.</p>
+      <p>A recipient who imports a shared checklist receives a new independent copy. Later edits to the sender’s checklist do not synchronize into the recipient’s imported copy.</p>
+    </section>
+
+    <section>
+      <h2>8. Subscriptions and payments</h2>
+      <p>Yormio uses RevenueCat to manage subscription entitlement state and Apple App Store and/or Google Play for store billing. Yormio does not receive your full payment-card details from the app stores. RevenueCat receives the Yormio permanent user identifier used for entitlement identity and subscription-related information such as product, store, status and expiration state.</p>
+      <p>Apple, Google and RevenueCat process information under their own applicable terms and privacy practices.</p>
+    </section>
+
+    <section>
+      <h2>9. Service providers</h2>
+      <p>Depending on the feature you use, Yormio currently relies on the following categories of providers:</p>
+      <ul>
+        <li><strong>Supabase</strong> for authentication, database services, server functions and cloud synchronization.</li>
+        <li><strong>Google Gemini</strong> for AI processing of voice or text input that you intentionally submit to AI features.</li>
+        <li><strong>RevenueCat</strong> for subscription entitlement and purchase-state management.</li>
+        <li><strong>Apple and Google</strong> for supported sign-in and app-store subscription/payment services.</li>
+        <li><strong>Netlify</strong> for hosting this website and receiving support/account-deletion form submissions.</li>
+      </ul>
+      <p>We do not sell personal data. The Yormio app and this legal website are not designed to use advertising trackers. No third-party analytics SDK is included in the audited mobile dependency set at the date of this policy.</p>
+    </section>
+
+    <section>
+      <h2>10. Retention</h2>
+      <ul>
+        <li><strong>Local product data:</strong> remains on your device until you delete it, delete the local account data, uninstall the app, or the operating system removes app storage.</li>
+        <li><strong>Temporary voice recording:</strong> kept only as needed for the capture flow and removed from the app’s temporary storage after processing/cancellation/discard. The current server implementation does not persist raw audio to Supabase Storage.</li>
+        <li><strong>Raw transcript:</strong> not saved by Yormio by default; confirmed structured data is retained instead.</li>
+        <li><strong>Linked-account cloud data:</strong> retained while needed to provide the account and sync service, until deletion or another applicable retention rule.</li>
+        <li><strong>Checklist share snapshot:</strong> currently expires after 7 days.</li>
+        <li><strong>Quota, mutation and security records:</strong> may be retained for the period reasonably needed for service integrity, fraud/abuse prevention, idempotency, debugging and reconciliation.</li>
+        <li><strong>Support/deletion forms:</strong> retained only as reasonably needed to respond, verify the request, keep necessary request records and meet legal obligations.</li>
+      </ul>
+      <p>Some information may remain for a limited period in backups or with independent service providers where deletion is not immediate or where retention is required for security, accounting, fraud prevention, dispute handling or law.</p>
+    </section>
+
+    <section>
+      <h2>11. Legal bases and international processing</h2>
+      <p>Where the GDPR or similar law applies, processing may rely on performance of the service you request, compliance with legal obligations, legitimate interests such as service security and abuse prevention, and consent where consent is legally required. Service providers may process data in countries outside your country of residence. Where legally required, appropriate transfer mechanisms are used or required from service providers.</p>
+    </section>
+
+    <section>
+      <h2>12. Your choices and rights</h2>
+      <p>Depending on applicable law, you may have rights to access, correct, delete, restrict or object to processing of personal data, and to receive portable data. You may also withdraw consent where processing is based on consent. To exercise a privacy right, contact <a href="mailto:bgswedenappdev@gmail.com">bgswedenappdev@gmail.com</a> or use the <a href="/account-deletion/">account deletion page</a>.</p>
+      <p>You may also have the right to complain to the competent data-protection authority in your country.</p>
+    </section>
+
+    <section>
+      <h2>13. Account deletion</h2>
+      <p>Yormio provides an in-app account deletion flow and an external deletion-request page. Account deletion is intended to remove the Yormio account and Yormio-controlled account data that is not required to be retained. Store subscription records and billing are controlled separately by Apple or Google.</p>
+      <div class="callout warning"><strong>Important:</strong> deleting your Yormio account does not automatically cancel an App Store or Google Play subscription. Cancel or manage the subscription through the store that billed you.</div>
+    </section>
+
+    <section>
+      <h2>14. Security</h2>
+      <p>Yormio uses access controls, row-level security, server-side ownership checks, secure device storage for authentication sessions where supported, encrypted HTTPS transport, bounded request sizes and other safeguards appropriate to the service. No internet service can guarantee absolute security.</p>
+    </section>
+
+    <section>
+      <h2>15. Children</h2>
+      <p>Yormio is a general productivity utility and is not designed as a service directed specifically to children. If local law requires parental or guardian authorization for a user to provide personal data, that authorization should be obtained before account or AI features are used.</p>
+    </section>
+
+    <section>
+      <h2>16. Changes to this policy</h2>
+      <p>We may update this policy when Yormio changes, when providers change, or when legal requirements change. The current version will be published at this URL with an updated effective date. Material changes will be communicated where required.</p>
+    </section>
+
+    <section>
+      <h2>17. Contact</h2>
+      <p><strong>Bedir Gocmez</strong><br>Email: <a href="mailto:bgswedenappdev@gmail.com">bgswedenappdev@gmail.com</a><br>Support: <a href="/support/">__SITE_ORIGIN__/support/</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <div class="brand footer-brand"><span class="brand-dot" aria-hidden="true"></span><span>Yormio</span></div>
+        <p class="muted small">A local-first reminder and checklist app with optional AI assistance.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/support/">Support</a>
+        <a href="/account-deletion/">Account deletion</a>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <span>© 2026 Bedir Gocmez. All rights reserved.</span>
+      <span>Last legal update: 25 September 2026</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0a2f2b">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Support — Yormio</title>
+  <meta name="description" content="Official Yormio support page for accounts, Premium, purchase restore, AI usage, privacy and troubleshooting.">
+  <link rel="canonical" href="__SITE_ORIGIN__/support/">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="Yormio home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Yormio</span>
+      </a>
+      <nav class="nav" aria-label="Legal and support navigation">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+        <a href="/account-deletion/">Delete account</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="legal shell">
+    <header class="legal-header">
+      <div class="eyebrow">Help</div>
+      <h1>Yormio Support</h1>
+      <p class="legal-lead">Need help with the app, your account, Premium, a purchase or a privacy request? Use the contact details or form below.</p>
+    </header>
+
+    <section class="contact-panel">
+      <div><span class="label">Operator</span><strong>Bedir Gocmez</strong></div>
+      <div><span class="label">Support email</span><a href="mailto:bgswedenappdev@gmail.com">bgswedenappdev@gmail.com</a></div>
+      <div><span class="label">Privacy and deletion</span><a href="/account-deletion/">Account deletion page</a></div>
+    </section>
+
+    <section>
+      <h2>Common questions</h2>
+      <details><summary>How do I restore Premium?</summary><p>Open Yormio Premium and use <strong>Restore Purchases</strong> while signed in to the Yormio account that should receive the entitlement and the store account used for the purchase.</p></details>
+      <details><summary>How do I cancel a subscription?</summary><p>Subscriptions are managed by the store that billed you. Cancel or manage the subscription in your Apple App Store or Google Play subscription settings. Deleting Yormio or deleting your Yormio account does not automatically cancel store billing.</p></details>
+      <details><summary>Why can AI stop temporarily on Premium?</summary><p>Premium is subject to fair use and service-protection controls. The current production policy can temporarily pause AI processing after 100 chargeable AI operations within a rolling 24-hour window.</p></details>
+      <details><summary>Does Yormio keep my raw voice recording?</summary><p>Yormio’s current implementation does not persist raw audio in Supabase Storage or application logs. The temporary device recording is removed after processing, cancellation or discard. See the <a href="/privacy/">Privacy Policy</a> for details.</p></details>
+      <details><summary>How do I delete my account?</summary><p>You can delete your account from Yormio’s account/settings flow. If you no longer have access to the app, use the <a href="/account-deletion/">external deletion request page</a>.</p></details>
+      <details><summary>Are notifications guaranteed?</summary><p>No. Notification delivery depends on operating-system permissions, battery management and other device conditions. Yormio is not an emergency alert service.</p></details>
+    </section>
+
+    <section>
+      <h2>Contact support</h2>
+      <p>You can email <a href="mailto:bgswedenappdev@gmail.com">bgswedenappdev@gmail.com</a> or submit this form. Do not include passwords, authentication tokens, payment-card details or sensitive information that is not needed to explain the issue.</p>
+      <form class="form" name="support" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/request-received/">
+        <input type="hidden" name="form-name" value="support">
+        <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
+        <div class="form-grid">
+          <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          <label><span>Platform</span><select name="platform"><option value="">Select</option><option>iOS</option><option>Android</option><option>Other</option></select></label>
+        </div>
+        <label><span>Topic</span><select name="topic" required><option value="">Select a topic</option><option>Account</option><option>Premium / purchase</option><option>AI capture</option><option>Notifications</option><option>Checklist sharing</option><option>Privacy</option><option>Other</option></select></label>
+        <label><span>Message</span><textarea name="message" rows="7" maxlength="4000" required></textarea></label>
+        <label class="check"><input type="checkbox" name="privacy_acknowledged" value="yes" required><span>I understand this information will be processed to respond to my request as described in the <a href="/privacy/">Privacy Policy</a>.</span></label>
+        <button class="button" type="submit">Send support request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <div class="brand footer-brand"><span class="brand-dot" aria-hidden="true"></span><span>Yormio</span></div>
+        <p class="muted small">A local-first reminder and checklist app with optional AI assistance.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/support/">Support</a>
+        <a href="/account-deletion/">Account deletion</a>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <span>© 2026 Bedir Gocmez. All rights reserved.</span>
+      <span>Last legal update: 25 September 2026</span>
+    </div>
+  </footer>
+</body>
+</html>
